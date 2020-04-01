@@ -1,0 +1,263 @@
+@import "~font-awesome/scss/font-awesome";
+@import "~jquery-confirm/css/jquery-confirm.css";
+@import "~jquery-toast-plugin/src/jquery.toast.css";
+@import "~select2/src/scss/core";
+@import "~izimodal/css/iziModal.css";
+@import "../../lib/common.css";
+@import "../../variables";
+@import "~toastr/toastr";
+@import "./main.css";
+
+.dis-none {
+  display : none;
+}
+
+.app-title {
+  padding-top    : 20px;
+  padding-bottom : 10px;
+}
+
+.form-group {
+  margin-bottom : 10px;
+}
+
+.perpage{
+  width: 75px;
+  display: inline $im;
+}
+
+.m-r-5{
+  margin-right: 5px;
+}
+
+.display-title,.display-unit{
+  font-size: 14px;
+}
+
+.display-unit{
+  padding-right: 5px;
+}
+
+.animated-checkbox label {
+  margin-bottom : 0px;
+}
+
+.hidden-small {
+  visibility : hidden;
+}
+
+.hidden_role {
+  visibility : hidden;
+  height     : 0px;
+}
+
+.empty-data {
+  text-align : center;
+}
+
+.language {
+  .change_language:hover {
+    cursor : pointer;
+  }
+
+  .change_language.active {
+    background : #28bbad;
+    color      : white;
+  }
+
+  .app-notification {
+    min-width : 200px;
+  }
+
+  .img-lang {
+    width         : 30px;
+    height        : 30px;
+    padding-right : 5px;
+  }
+}
+
+
+.f-b {
+  font-weight : bold;
+}
+
+.form-horizontal .control-label {
+  font-weight : bold;
+}
+
+.toast-message{
+  white-space: pre-wrap;
+}
+
+.paginate-info {
+  #pagination-demo {
+    margin           : 0px;
+    display          : -webkit-box;
+    display          : -ms-flexbox;
+    display          : flex;
+    -webkit-box-pack : end;
+    -ms-flex-pack    : end;
+    justify-content  : flex-end;
+  }
+}
+
+.table-responsive .action {
+  width      : 155px;
+  min-width  : 155px;
+  text-align : center;
+}
+
+.t-r {
+  text-align : right;
+}
+
+.app-content {
+  padding : 20px 30px $im;
+
+  .row_info {
+    .tile-title {
+      border-bottom : 1px solid #009688;
+    }
+  }
+
+  .tile {
+    margin-bottom : 14px;
+
+    .tile-title {
+      margin-bottom : 10px;
+    }
+  }
+
+  .table {
+    margin-bottom : 0px;
+
+    .btn {
+      padding : 0.2rem 0.55rem;
+    }
+
+    .animated-checkbox input[type="checkbox"] + .label-text:before {
+      font-size : 20px;
+    }
+  }
+}
+
+.icon-btn {
+  .fa {
+    margin-right : 5px;
+  }
+}
+
+.display-none {
+  display : none;
+}
+
+.dis-none {
+  display : none;
+}
+
+.app-sidebar__user-avatar {
+  width         : 56px;
+  height        : 56px;
+  border-radius : 100%;
+  background    : #fff;
+  z-index       : 1000;
+  position      : inherit;
+  border        : 1px solid rgba(52, 73, 94, .44);
+  padding       : 4px;
+  object-fit    : cover;
+}
+
+.site_title {
+  padding-left : 0px !important;
+  margin-top   : 5px;
+}
+
+.profile_info {
+  padding : 20px 10px 10px !important;
+}
+
+.treeview.is-expanded {
+  .treeview-menu {
+    border-left : 3px solid #1ec5b6;
+  }
+}
+
+.app-sidebar {
+  .sidebar-footer {
+    bottom     : 0px;
+    clear      : both;
+    display    : block;
+    padding    : 5px 0 0;
+    position   : fixed;
+    width      : 230px;
+    background : #0d3b37;
+    z-index    : 999;
+
+    a {
+      padding    : 7px 0 3px;
+      text-align : center;
+      width      : 50%;
+      font-size  : 17px;
+      display    : block;
+      color      : #ffffff;
+      float      : left;
+      background : #007d71;
+      cursor     : pointer;
+    }
+  }
+}
+
+.page-header-cus {
+  padding-bottom : 9px;
+  margin         : 40px 0 20px;
+  border-bottom  : 1px solid #eee;
+}
+
+.fontawesome-icon-list .fa-hover a {
+  display       : block;
+  line-height   : 32px;
+  height        : 32px;
+  padding-left  : 10px;
+  border-radius : 4px;
+}
+
+.fontawesome-icon-list .fa-hover a .fa {
+  width        : 32px;
+  font-size    : 16px;
+  display      : inline-block;
+  text-align   : right;
+  margin-right : 10px;
+}
+
+.fontawesome-icon-list .fa-hover a:hover {
+  background-color : #ddd;
+  color            : #999999;
+  text-decoration  : none;
+}
+
+.pace {
+  -webkit-pointer-events : none;
+  pointer-events         : none;
+
+  -webkit-user-select    : none;
+  -moz-user-select       : none;
+  user-select            : none;
+}
+
+.pace-inactive {
+  display : none;
+}
+
+.pace .pace-progress {
+  background : #29d;
+  position   : fixed;
+  z-index    : 2000;
+  top        : 0;
+  right      : 100%;
+  width      : 100%;
+  height     : 2px;
+}
+
+.iziModal {
+  z-index : 9999 $im;
+}

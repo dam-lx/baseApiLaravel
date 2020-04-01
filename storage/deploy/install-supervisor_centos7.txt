@@ -1,0 +1,17 @@
+1.yum install supervisor
+2.vi /etc/supervisord.conf edit section program as following:
+[program:laravel-worker]
+command=php /path/to/app.com/artisan queue:work 
+process_name=%(program_name)s_%(process_num)02d
+numprocs=8 
+priority=999 
+autostart=true
+autorestart=true  
+startsecs=1
+startretries=3
+user=apache
+redirect_stderr=true
+stdout_logfile=/path/to/log/worker.log
+
+3.systemctl enable supervisord to autorun at start
+4.systemctl restart supervisord to restart the service

@@ -1,0 +1,31 @@
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Fonts
+@import "~font-awesome/scss/font-awesome";
+// Variables
+@import "../variables";
+//=====================Login css===============================
+@import './main';
+@import './util';
+@import '~jquery-toast-plugin/src/jquery.toast.css';
+
+.container-login100-form-btn {
+	justify-content: center;
+}
+.login100-form{
+	padding: 43px 88px 93px 88px $im;
+}
+.login100-form-title::before{
+	background-color: rgba(49, 98, 61, 0.7);
+}
+.login-failed{
+	width: 100%;
+	text-align: center;
+}
+.error-area{
+	width: 100%;
+	.invalid-feedback{
+		display:block;
+		text-align: center;
+	}
+}

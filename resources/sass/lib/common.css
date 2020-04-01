@@ -1,0 +1,16 @@
+.tooltip >.tooltip-inner {
+    background-color /**/: #0c5460;
+    border:none;box-shadow:none;
+    outline:none;
+}
+.tooltip-error >.tooltip-inner{
+    background-color /**/: #df1a12;
+    border:none;box-shadow:none;
+    outline:none;
+}
+.tooltip .tooltip-arrow {
+    border-top-color: #df1a12 !important;
+}
+.input-error{
+    border-color: #df1a12;
+}

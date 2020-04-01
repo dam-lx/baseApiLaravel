@@ -1,0 +1,150 @@
+@import "~toastr/toastr";
+.card-body{
+  padding: 0;
+}
+
+
+.treeview .list-group-item {
+  cursor: pointer;
+}
+
+.treeview span.indent {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.treeview span.icon {
+  width: 12px;
+  margin-right: 5px;
+}
+
+.treeview .node-disabled {
+  color: silver;
+  cursor: not-allowed
+}
+
+.node-treeview6 {
+  color: #428bca;
+  width: 100%;
+}
+
+.node-treeview6:not(.node-disabled):hover {
+  background-color: #F5F5F5;
+}
+.menu-item,.group-menu-item{
+  list-style-type: none;
+}
+
+.width-200{
+  width: 200px;
+}
+.menu-item{
+  position: relative;
+}
+[hidden]{
+  display: none;
+}
+.group-menu-item{
+  width: 100%;
+  .CUD{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.dInput-header,.ButtonCUD-header{
+  padding-right: 0px;
+}
+.plus{
+  cursor: pointer;
+  margin-left:-20px;
+  margin-top:15px ;
+  float: left;
+}
+.CUD{
+  padding-top: 15px;
+  a span{
+    color:white;
+  }
+}
+.minus{
+  cursor: pointer;
+
+  float: left;
+  margin-top:20px ;
+  margin-left:-20px;
+}
+.CssName{
+  margin-right: 5px;
+  width:25%;
+  background-color: rgba(231, 243, 164, 0.26) !important;
+}
+.minusButton{
+  position: absolute;
+  top: 23px;
+  left: -5px;
+}
+.CssURL{
+  margin-left: 5px;
+  background-color: rgba(231, 243, 164, 0.26) !important;
+
+}
+.dInput{
+  width: 100%;
+  display: inline-flex;
+  margin-top:13px;
+  height: 35px !important;
+}
+
+.itemDelete{
+  margin-left: 10px;
+
+}
+.itemEdit{
+  margin-left: 10px;
+
+}
+.itemUpdate{
+  margin-left: 10px;
+
+}
+.iteamCreate{
+  margin-left: 10px;
+
+}
+.itemSave{
+  margin-left: 10px;
+}
+.glyphicon-remove{
+  width: 20px;
+  line-height: 25px;
+}
+.fa-pencil{
+  width: 20px;
+  line-height: 25px;
+}
+.glyphicon-update{
+  width: 20px;
+  line-height: 25px;
+}
+.tooltip >.tooltip-inner {background-color /**/: #df6662;border:none;box-shadow:none;outline:none;}
+
+.tooltip .tooltip-arrow {
+  border-top-color: #df6662 !important;
+}
+.input-error{
+  border-color: #ff151f;
+}
+
+.checked{
+  float: right;
+  left: -18px;
+  color : #23c223;
+  top: 8px;
+  font-size: 13px;
+  visibility: hidden;
+}
+.attach{
+  position: relative;
+  top: 9px;
+  font-size: 20px;
+}

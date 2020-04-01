@@ -1,0 +1,51 @@
+@import "~izimodal/css/iziModal.css";
+@import "~toastr/toastr";
+.edit, .save, .delete {
+  cursor: pointer;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.save, #save-all {
+  color: green;
+}
+
+.function {
+  padding-bottom: 10px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.form-title {
+  padding-top: 7px;
+}
+
+#edit-all.open {
+  color: green;
+}
+
+.text-warning {
+  color: orange;
+}
+
+legend {
+  font-size: 16px !important;
+}
+.card-body{
+  padding:0px;
+}
+.edit-role,.delete-role{
+  font-size: 20px;
+}
+.edit-role:hover,.delete-role:hover{
+  cursor: pointer;
+  font-size: 22px;
+}

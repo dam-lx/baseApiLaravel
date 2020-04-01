@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Note Laravel</title>
+	<style type="text/css">
+		.errors{
+			color: #DE3E3E;
+			font-size: 20px;
+		}
+		.error-details li{
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<p class="errors">
+		* Lỗi http bị chặn khi chuyển sang https
+	</p>
+	<ul class="error-details">
+		<li>
+			Khi bạn sử dụng SSL trong website Laravel của bạn. Khi đó, khi bạn gọi các hàm như asset để import JS hay CSS file thì mặc định nó trả về là http chứ không phải là https.
+		</li>
+		<li>
+			Vì vậy khi đó nếu bạn muốn khi sử dụng các hàm này thì buộc Laravel trả về giao thức https thì ta làm như sau: Mở file app/Providers/AppServiceProvider.php và cập nhật lại hàm boot như sau.
+		</li>
+		<li>
+			public function boot()
+			{
+			if(env('REDIRECT_HTTPS')==true)
+			{
+			\URL::forceScheme('https');
+			}
+			}
+		</li>
+		<li>
+			Tiếp đó: Bạn mở file .env tại thư mục root của project rồi thêm 1 hằng số REDIRECT_HTTPS và thiết lập giá trị cho nó là true.
+			</br>
+			REDIRECT_HTTPS=true
+		</li>
+	</ul>
+</div>
+<!--===========================================================-->
+<div>
+	<p class="errors">
+		* SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO)
+		<br>
+		* No application encryption key has been specified
+	</p>
+	<ul class="error-details">
+		<li>
+			Chạy lệnh <b>php artisan key:generate</b> để gen lại key
+		</li>
+		<li>
+			Coppy key đó bỏ vào trong config/app, khi đó file app sẽ như sau:
+		</li>
+		<li>
+			'key' => env('APP_KEY',"String key"),
+		</li>
+		<li>
+			Coppy hết cấu hình của DB trong file env vào config/database, lúc đó file database.php sẽ có cấu hình:
+		</li>
+		<li>
+			<p>'mysql' => [</p>
+			<p>'driver' => 'mysql',</p>
+			<p>'host' => env('DB_HOST', '192.168.2.5'),</p>
+			<p>'port' => env('DB_PORT', '33066'),</p>
+			<p>'database' => env('DB_DATABASE', 'store'),</p>
+			<p>'username' => env('DB_USERNAME', 'root'),</p>
+			<p>'password' => env('DB_PASSWORD', 'Admin@123456'),</p>
+			<p>'unix_socket' => env('DB_SOCKET', ''),</p>
+			<p>'charset' => 'utf8mb4',</p>
+			<p>'collation' => 'utf8mb4_unicode_ci',</p>
+			<p>'prefix' => '',</p>
+			<p>'strict' => false,</p>
+			<p>'engine' => null,</p>
+			],
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Lỗi iframe gọi 2 lần
+	</p>
+	<ul class="error-details">
+		<li>
+			Do class "iziModal-iframe" là class chung, nên khi set src cho modal edit phải đưa id modal edit vào nếu không sẽ bị ăn theo của modal Add
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Ajax truyền đi
+	</p>
+	<ul class="error-details">
+		<li>
+			Khi gọi ajax truyền đi, tất cả dữ liệu ở bất kì kiểu nào đều bị chuyển về dạng <b>"string"</b> nên qua controller phải bắt ép kiểu lại lần nữa
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Lỗi Interface is not instantiable while building controller
+	</p>
+	<ul class="error-details">
+		<li>
+			Khi tạo ra một interface và service mới thì phải khai báo trong provider của model đấy
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Remove node_module and re install
+	</p>
+	<ul class="error-details">
+		<li>
+			rm -rf node_modules
+		</li>
+		<li>
+			rm package-lock.json yarn.lock
+		</li>
+		<li>
+			npm cache clear --force
+		</li>
+		<li>
+			npm install
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* mix.combine(['one.js', 'two.js'], 'merged.js');
+	</p>
+	<ul class="error-details">
+		<li>
+			mix sẽ combine 2 file js  thành một phai chung
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Trying to get property 'headers' of non-object ở CSRF Toke
+	</p>
+	<ul class="error-details">
+		<li>
+			Lỗi khi validate của laravel , khai báo redirect trả về ở Exceptions, hàm invalid
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* mix.babel(['one.js', 'two.js'], 'merged.js');
+	</p>
+	<ul class="error-details">
+		<li>
+			mix sẽ combine 2 file js được viết theo ES2015  thành một phai chung và sẽ
+			biên dịch phai đó ra thành js để mọi trình duyệt đều có thể hiểu được
+		</li>
+	</ul>
+</div>
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* export function trong ES6
+	</p>
+	<ul class="error-details">
+		<li>
+			export default  function(){}
+		</li>
+		<li>
+			Chú ý cuối function không có dấu chấm phẩy nếu file đó chỉ xuất ra 1 hàm
+		</li>
+		<li>
+			Cách import 1 hàm độc lập: import notify from './layout/toast_plugin.js';
+		</li>
+	</ul>
+</div>
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Loi index
+	</p>
+	<ul class="error-details">
+		<li>
+			Mo folder In Windows, delete the contents of AppData\Local\Sublime Text 3\Index\
+		</li>
+		<li>
+			Xoa het content de load lai index
+		</li>
+	</ul>
+</div>
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Loi the image failed to upload
+	</p>
+	<ul class="error-details">
+		<li>
+			Chỉnh lại upload_max_filesize trong php.ini
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Lỗi jquery, $ is not defined
+	</p>
+	<ul class="error-details">
+		<li>
+			Xem lại đã require jQuery chưa, một file js chỉ require 1 lần jquery
+		</li>
+		<li>
+			Thể script phải đặt ở cuối cùng của trang, ở bên ngoài của thể &lt; /body &gt; nếu không sẽ bị phát sinh lỗi không đồng bộ
+		</li>
+	</ul>
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Lỗi GET http://localhost/fonts/vendor/font-awesome/fontawesome-webfont.woff2?af7ae505a9eed503f8b8e6982036873e net::ERR_ABORTED 404 (Not Found) khi sử dụng webpack
+	</p>
+	<ul class="error-details">
+		<li>
+			setPublicPath("public") cho thư mục gốc trong webpack
+		</li>
+		<li>
+			setResourceRoot('public/') cho thư mục liên kết trong webpack
+		</li>
+	</ul>
+</div>
+
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Migration special folder
+	</p>
+	<ul class="error-details">
+		<li>
+			php artisan migrate --path=database/migrations/alter
+		</li>
+	</ul>g
+</div>
+
+<!--=======================================================-->
+<div>
+	<p class="errors">
+		* Change charset and collate for all table
+	</p>
+	<ul class="error-details">
+		<li>
+			SELECT CONCAT("ALTER TABLE ", TABLE_SCHEMA, '.', TABLE_NAME," CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;") AS    ExecuteTheString
+			FROM INFORMATION_SCHEMA.TABLES
+			WHERE TABLE_SCHEMA="mansion"
+			AND TABLE_TYPE="BASE TABLE";
+		</li>
+	</ul>
+</div>
+<div>
+	<p class="errors">
+		* Job không chạy
+	</p>
+	<ul class="error-details">
+		<li>
+			Job không chạy được nếu beginTransaction chưa đươc commit
+		</li>
+		<li>
+			Muốn dd thì database phải connect ở local
+		</li>
+	</ul>g
+</div>
+</body>
+</html>

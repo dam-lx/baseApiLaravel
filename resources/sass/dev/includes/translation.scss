@@ -1,0 +1,49 @@
+.edit, .save,.delete{
+  cursor: pointer;
+  padding: 8px 4px 4px 13px;
+}
+.table th{
+  text-align: center;
+}
+.table td{
+  vertical-align: middle;
+}
+.save, #save-all{
+  color: green;
+}
+.function{
+  padding-bottom: 10px;
+}
+.btn{
+  cursor: pointer;
+}
+.form-title{
+  padding-top: 7px;
+}
+#edit-all.open{
+  color: green;
+}
+.text-warning{
+  color: orange;
+}
+legend{
+  font-size: 16px !important;
+}
+.lang-input{
+  display: inline-flex;
+  width: 100%;
+  padding: 2px;
+}
+.lang-code{
+  padding: 4px;
+  width: 40px;
+}
+.tbl-trans td{
+  vertical-align: middle !important;
+}
+legend{
+  border-bottom: 1px solid #e5e5e5;
+}
+.function{
+  padding: 0 40px;
+}

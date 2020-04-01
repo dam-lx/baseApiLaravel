@@ -1,0 +1,95 @@
+@import "../../_variables";
+@import "~toastr/toastr";
+.dis-none{
+  display: none;
+}
+.thumb {
+  width         : 200px;
+  height        : 200px;
+  min-height    : 200px;
+  min-width     : 200px;
+  margin        : 0.2em -0.7em 0 0;
+  border-radius : 50%;
+}
+input[type="file"] {
+  display: none;
+}
+input[type="checkbox"] {
+  padding-top: 5px;
+  height: 20px;
+  width: 20px;
+}
+.remove_img_preview {
+  position:relative;
+  left: 100px;
+  top:-100px;
+  width: 15px;
+  background:black;
+  color:white;
+  border-radius:90px;
+  text-align:center;
+  cursor:pointer;
+}
+.remove_img_preview:before {
+  content:"\f057";
+}
+.form-horizontal .control-label{
+  text-align: left;
+}
+.edit_user{
+  i{
+    font-size: 18px;
+  }
+}
+.changePass{
+  display: flex;
+  align-items: center;
+  label{
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+.div_sex{
+  margin-bottom: 15px;
+}
+.div_avatar{
+  .tile-body{
+    display        : flex;
+    justify-content: center;
+    padding-bottom : 20px;
+    .form-group{
+      position: relative;
+      .custom-file-upload{
+        position: absolute;
+        bottom  : -25px;
+        right   : 0px;
+      }
+    }
+    .reset_image{
+      position  : absolute;
+      top       : 10px;
+      right     : 0px;
+      font-size : 18px;
+    }
+    .reset_image:hover{
+      cursor: pointer;
+    }
+  }
+  .tile-footer{
+    text-align: center;
+  }
+
+}
+.div_info{
+  .div_btn{
+    text-align: right;
+  }
+}
+.row_profile{
+  margin: auto 0px;
+}
+.div_info{
+  .input-group-text{
+    width: 42px;
+  }
+}
